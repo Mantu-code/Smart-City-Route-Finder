@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart City Route Finder</title>
+
+    <!-- Professional dashboard styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon"><img src="location.png" alt="image"></div>
+            <div>
+                <h1>City Route Finder</h1>
+            
+            </div>
+        </div>
+
+        <!-- <div class="status">
+            <span class="status-dot"></span>
+            City Network
+        </div> -->
+    </header>
+
+    <main class="dashboard">
+
+        <section class="welcome">
+            <p class="eyebrow">SMART CITY NAVIGATION</p>
+            <h2>Find your shortest route.</h2>
+            <p>
+                Choose your starting point and destination.
+                Our route finder calculates the shortest path
+                using Dijkstra's Algorithm.
+            </p>
+        </section>
+
+        <section class="route-panel">
+            <div class="section-heading">
+                <div>
+                    <h3>Plan your journey</h3>
+                    <p>Select two locations to begin.</p>
+                </div>
+                <span class="algorithm-tag">DIJKSTRA'S ALGORITHM</span>
+            </div>
+
+            <form id="routeForm">
+
+                <div class="location-fields">
+
+                    <div class="field">
+                        <label for="source">Starting location</label>
+                        <select id="source" name="source" required>
+                            <option value="">Loading locations...</option>
+                        </select>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="swapButton"
+                        class="swap-button"
+                        aria-label="Swap starting location and destination"
+                        title="Swap locations"
+                    >↕</button>
+
+                    <div class="field">
+                        <label for="destination">Destination</label>
+                        <select id="destination" name="destination" required>
+                            <option value="">Loading locations...</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="findRouteButton" class="primary-button">
+                    Find Shortest Route
+                    <span aria-hidden="true">→</span>
+                </button>
+
+                <p id="formMessage" class="form-message" role="status">
+                    Connecting to the city network...
+                </p>
+
+            </form>
+        </section>
+
+        <section class="map-panel">
+            <div class="section-heading">
+                <div>
+                    <h3>City road network</h3>
+                    <p>Locations connected by roads.</p>
+                </div>
+                <!-- <span class="map-label">7 LOCATIONS</span> -->
+            </div>
+
+            <div id="cityMap" class="city-map">
+                <p class="map-placeholder">
+                    Your interactive city map will appear here.
+                </p>
+            </div>
+
+            <!-- <div class="map-legend">
+                <span><i class="legend-dot normal-dot"></i> City location</span>
+                <span><i class="legend-line"></i> Connecting road</span>
+                <span><i class="legend-line route-legend"></i> Shortest route</span>
+            </div> -->
+        </section>
+
+        <section id="resultPanel" class="result-panel" aria-live="polite">
+            <div class="result-heading">
+                <div>
+                    <p class="eyebrow">HAPPY JOURNEY</p>
+                    <h3>Route results</h3>
+                </div>
+                <span id="resultStatus" class="result-status">Awaiting search</span>
+            </div>
+
+            <div class="distance-card">
+                <div>
+                    <p>Total travel distance</p>
+                    <div class="distance-value">
+                        <span id="totalDistance">--</span>
+                        <span class="distance-unit">km</span>
+                    </div>
+                </div>
+                <div class="distance-icon" aria-hidden="true">↗</div>
+            </div>
+
+            <div class="route-details">
+                <h4>Shortest path</h4>
+                <ol id="routeSteps">
+                    <li>Select your locations and find a route.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="info-panel">
+            <div class="info-icon" aria-hidden="true">i</div>
+            <div>
+                <h3>How does it work?</h3>
+                <p>
+                    Dijkstra's Algorithm checks road distances and
+                    determines a minimum-distance path between two
+                    locations. Each road has a non-negative distance.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Smart City Route Finder</p>
+        <p>Academic DAA Mini-Project · Powered by Dijkstra's Algorithm</p>
+        <p>Mantu Kunda</p>
+    </footer>
+
+    <!-- Interactive behaviour will be added in the JavaScript step -->
+    <script src="script.js"></script>
+
+</body>
+</html>
