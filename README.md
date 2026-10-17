@@ -104,7 +104,12 @@ Where:
 
 Screenshots
 
-![Smart City Route Finder Dashboard](screenshots/dashboard.png)
+![Smart City Route Finder Dashboard](screenshots/
+<img width="1418" height="845" alt="Screenshot 2026-10-17 at 16 09 44" src="https://github.com/user-attachments/assets/942a46c3-822b-4333-a213-1ce2a54adf31" />
+<img width="1420" height="595" alt="Screenshot 2026-10-17 at 16 08 08" src="https://github.com/user-attachments/assets/91b4d7c2-9d67-4b21-9741-988fd800d69c" />
+<img width="1420" height="791" alt="Screenshot 2026-10-17 at 16 10 02" src="https://github.com/user-attachments/assets/beba13d7-a7aa-4666-a783-ef58a8570f8e" />
+)
+
 
 Future Enhancements
 
